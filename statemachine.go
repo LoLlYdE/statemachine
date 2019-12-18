@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"github.com/lollyde/fileLib"
+	"github.com/lollyde/gofileLib"
 	"os"
 	"strings"
 )
@@ -31,7 +31,7 @@ func main() {
 		fmt.Println("Please provide a machinefile via command line argument")
 		return
 	}
-	var machine,err = fileLib.ReadFileIntoSlice(os.Args[1])
+	var machine,err = gofileLib.ReadFileIntoSlice(os.Args[1])
 	if err == nil {
 		for _,item := range machine {
 			fmt.Println(item)
