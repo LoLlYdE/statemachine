@@ -46,11 +46,10 @@ func TestParseData(t *testing.T) {
 
 	// test example data
 	exampleData := parseData("11000101100101001100")
-	exampleDataCorrect := []bool{true,true,false,false,false,true,false,true,true,false,false,true,false,true,false,false,true,true,false,false}
+	exampleDataCorrect := []bool{true, true, false, false, false, true, false, true, true, false, false, true, false, true, false, false, true, true, false, false}
 	if !boolSliceEquals(exampleData, exampleDataCorrect) {
 		t.Errorf("parseData(\"\") failed, expected %v, got %v", exampleDataCorrect, exampleData)
 	}
-
 
 }
 
@@ -58,7 +57,7 @@ func boolSliceEquals(data, correct []bool) bool {
 	if len(data) != len(correct) {
 		return false
 	}
-	for i,item := range data{
+	for i, item := range data {
 		if item != correct[i] {
 			return false
 		}
@@ -66,11 +65,11 @@ func boolSliceEquals(data, correct []bool) bool {
 	return true
 }
 
-func stringSliceEquals(data, correct [] string) bool {
+func stringSliceEquals(data, correct []string) bool {
 	if len(data) != len(correct) {
 		return false
 	}
-	for i,item := range data{
+	for i, item := range data {
 		if item != correct[i] {
 			return false
 		}
